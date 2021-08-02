@@ -197,7 +197,7 @@
                 draw()
                 return
             }
-            fetch("C:/Users/%EC%A0%95%EC%83%81%ED%98%84/Documents/GitHub/myClass/" + stuid[0] + ".json")
+            fetch(stuid[0] + ".json")
                 .then(response => response.json())
                 .then(json => {
                     data = json
