@@ -102,6 +102,9 @@
             document.getElementById('viewer').style.display = 'flex'
             document.getElementById('name').innerText = user.name
             let totalClass = 0, classList = [[], [], [], [], []], gg = {}, colorSet = {}, realClass = 0
+            for (let i of user) {
+                if (stuid[0] === i.id[0]) gg[i.id] = []
+            }
             for (let i = 0; i < 5; i++) {
                 for (let j = 0; j < 9; j++) classList[i].push([document.getElementById('gongang').checked ? "공강" : ""])
             }
