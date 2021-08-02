@@ -102,10 +102,7 @@
             document.getElementById('viewer').style.display = 'flex'
             document.getElementById('name').innerText = user.name
             let totalClass = 0, classList = [[], [], [], [], []], gg = {}, colorSet = {}, realClass = 0
-            for (let i of data.user) {
-                console.log(i)
-                if (stuid[0] === i.id[0] && !gg[i.id]) gg[i.id] = []
-            }
+
             for (let i = 0; i < 5; i++) {
                 for (let j = 0; j < 9; j++) classList[i].push([document.getElementById('gongang').checked ? "공강" : ""])
             }
@@ -169,6 +166,10 @@
             document.getElementById('stableh').innerHTML = `<th>이름</th>
                     <th>시간</th>`
             for (let i = 0; i < mag; i++) document.getElementById('stableh').innerHTML += `<th>${i + 1}</th>`
+
+            for (let i of data.user) {
+                if (stuid[0] === i.id[0] && stuid !== i.id && !gg[i.id]) gg[i.id] = []
+            }
 
             let gginfo = []
             console.log(gg)
