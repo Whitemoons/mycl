@@ -123,6 +123,7 @@
             }
             if (document.getElementById('color').checked) colorSet['SA'] = colors[cn]
             ++cn
+            console.log(user)
             for (let i of user.data) {
                 let nowClass = _.filter(data.class, i).length
                 totalClass += nowClass
