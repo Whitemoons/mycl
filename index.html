@@ -91,6 +91,7 @@
 
         function draw() {
             let search = document.getElementById('gf').value
+            console.log(data)
             let user = _.find(data.user, {id: document.getElementById("stuid").value})
             if (!user) {
                 M.toast({html: '학번이 올바르지 않아요.'})
