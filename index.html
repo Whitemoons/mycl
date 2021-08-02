@@ -166,6 +166,7 @@
 
             let gginfo = []
             for (let i in gg) {
+                console.log(gg[i])
                 let thtml = '', ti = 0
                 for (let j of gg[i]) {
                     thtml += `<td class="${colorSet[j.name]} lighten-3">${j.name}</td>`
